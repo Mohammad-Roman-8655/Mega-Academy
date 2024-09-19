@@ -3,6 +3,7 @@ import CarouselShow from './CarouselShow'
 import NoticeBoard from './NoticeBoard'
 import Managers from './Managers'
 import OurTeacher from './OurTeacher'
+import OurStudents from './OurStudents'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
          <NoticeBoard/>
          <Managers/>
          <OurTeacher/>
+         <OurStudents/>
     </div>
   )
 }
