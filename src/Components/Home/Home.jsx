@@ -4,6 +4,7 @@ import NoticeBoard from './NoticeBoard'
 import Managers from './Managers'
 import OurTeacher from './OurTeacher'
 import OurStudents from './OurStudents'
+import EnrollStatus from './EnrollStatus'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
          <Managers/>
          <OurTeacher/>
          <OurStudents/>
+         <EnrollStatus/>
     </div>
   )
 }
