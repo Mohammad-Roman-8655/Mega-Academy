@@ -5,16 +5,20 @@ import Managers from './Managers'
 import OurTeacher from './OurTeacher'
 import OurStudents from './OurStudents'
 import EnrollStatus from './EnrollStatus'
+import AboutSchool from './AboutSchool'
+import Footer from './Footer'
 
 function Home() {
   return (
     <div>
          <CarouselShow/>
          <NoticeBoard/>
-         <Managers/>
+         <AboutSchool/>
+         <Managers/>      
          <OurTeacher/>
          <OurStudents/>
          <EnrollStatus/>
+         <Footer/>
     </div>
   )
 }
