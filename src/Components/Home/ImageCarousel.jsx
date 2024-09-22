@@ -19,7 +19,7 @@ const ImageCarousel = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full  ">
+    <div className="relative w-full   mb-20 ">
       {/* Image */}
       <div className="overflow-hidden rounded-lg shadow-lg ">
         <img

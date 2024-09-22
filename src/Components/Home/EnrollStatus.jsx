@@ -56,7 +56,7 @@ function EnrollStatus() {
 
 
     </div>
-     <div className="my-20 bg-blue-500 h-80 pt-20">
+     <div className="my-20 bg-gradient-to-r from-sky-500 to-gray-700 text-white h-80 pt-20">
         <div className='flex justify-around items-start'>
             <div className='text-center'>
             <i className="fa-solid fa-person-chalkboard text-6xl"></i>

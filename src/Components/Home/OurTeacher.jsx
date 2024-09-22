@@ -16,8 +16,8 @@ function OurTeacher() {
   };
   return (
 
-      <div className='w-3/4 m-auto my-20 '>
-      <h1 className="text-[60px] text-center font-bold">Our Teachers</h1>
+      <div className='lg:w-[75%] m-auto my-20 '>
+      <h1 className="lg:text-[60px] md:text-[60px] sm:text-[40px] text-[40px] text-center font-bold">Our Teachers</h1>
      
      <div className='mt-10 rounded-lg gap-6 bg-gray-300 px-7 py-7'>
      <Slider {...settings}>

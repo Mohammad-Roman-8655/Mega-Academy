@@ -7,6 +7,7 @@ import OurStudents from './OurStudents'
 import EnrollStatus from './EnrollStatus'
 import AboutSchool from './AboutSchool'
 import Footer from './Footer'
+import ConnectForm from './ConnectForm'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
          <OurTeacher/>
          <OurStudents/>
          <EnrollStatus/>
+         <ConnectForm/>
          <Footer/>
     </div>
   )
