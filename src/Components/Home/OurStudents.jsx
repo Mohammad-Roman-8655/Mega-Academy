@@ -41,7 +41,7 @@ function OurStudents() {
       return (
 
         <div className='w-3/4 m-auto my-20 '> 
-        <h1 className="text-[60px] text-center font-bold">Our Students</h1>
+        <h1 className="lg:text-[60px] md:text-[60px] sm:text-[40px] text-[40px] text-center font-bold">Our Students</h1>
        
        <div className=' mt-10 rounded-lg gap-6 bg-gray-300 px-7 py-7'>
        <Slider {...settings} className="slider-container">
@@ -49,7 +49,7 @@ function OurStudents() {
        {
         data.map((tdata)=>{
           return (
-            <div className='bg-white  lg:h-[450px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
+            <div key={tdata.id} className='bg-white  lg:h-[450px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
             <div className=' flex justify-center text-center items-center bg-blue-500  rounded-t-xl'>
               <img  className=" rounded-full"src={tdata.profile} alt="Teachers img" />
             </div>
@@ -75,6 +75,7 @@ function OurStudents() {
 }
 const data=[
     {
+      id:1,
       Name:"Mohammad Roman",
       Class:"I",
       City:"Anchramau",
@@ -83,6 +84,7 @@ const data=[
       profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
     },
     {
+        id:2,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",
@@ -91,6 +93,7 @@ const data=[
         profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
       },
       {
+        id:3,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",
@@ -99,6 +102,7 @@ const data=[
         profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
       },
       {
+        id:4,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",
@@ -107,6 +111,7 @@ const data=[
         profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
       },
       {
+        id:5,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",
@@ -115,6 +120,7 @@ const data=[
         profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
       },
       {
+        id:6,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",
@@ -123,6 +129,7 @@ const data=[
         profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
       },
       {
+        id:7,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",
@@ -131,6 +138,7 @@ const data=[
         profile:"https://img.freepik.com/free-vector/profile-picture-template-design_742173-22027.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
       },
       {
+        id:8,
         Name:"Mohammad Roman",
         Class:"I",
         City:"Anchramau",

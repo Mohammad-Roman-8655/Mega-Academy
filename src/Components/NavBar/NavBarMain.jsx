@@ -24,7 +24,7 @@ function NavBarMain() {
             <NavLink className="hover:text-black " to="/Facilities">Facilities</NavLink>
             <NavLink className="hover:text-black " to="/About">About</NavLink>
             <NavLink className="hover:text-black " to="/Contact">Contact</NavLink>
-            <NavLink className='lg:text-[20px] md:text-[20px] sm:text-[10px] text-[10px] border-[2px]  className="hover:text-black " border-white  lg:px-2 md:px-2 sm:px-1 px-1 py-1 rounded-md' to="/Login">Login/Register</NavLink>
+            <NavLink className='lg:text-[20px] md:text-[20px] sm:text-[10px] text-[10px] border-[2px]  hover:text-black " border-white  lg:px-2 md:px-2 sm:px-1 px-1 py-1 rounded-md' to="/Login">Login/Register</NavLink>
 
 
        
