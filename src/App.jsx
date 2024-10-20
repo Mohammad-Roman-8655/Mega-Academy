@@ -18,7 +18,16 @@ import LabRules from "./Components/Academics/LabRules"
 import PTM from "./Components/Academics/PTM"
 import SchoolTiming from "./Components/Academics/SchoolTiming"
 import SubjectDistribution from "./Components/Academics/SubjectDistribution"
+import PrimarySchool from "./Components/Admissions/PrimarySchool"
+import SecondrySchool from "./Components/Admissions/SecondrySchool"
+import SeniorSchool from "./Components/Admissions/SeniorSchool"
+import DownloadAdmissionForm from "./Components/Admissions/DownloadAdmissionForm"
+import OnlineAdmissionForm from "./Components/Admissions/OnlineAdmissionForm"
+import FeeStructure from "./Components/Admissions/FeeStructure"
+import AdmissionProcedure from "./Components/Admissions/AdmissionProcedure"
+import GeneralRules from "./Components/Admissions/GeneralRules"
 import { BrowserRouter,Route ,Routes } from "react-router-dom"
+
 
 function App() {
   return (
@@ -45,6 +54,14 @@ function App() {
       <Route path="/Academics/PTM" element={<PTM/>}/>
       <Route path="/Academics/SchoolTiming" element={<SchoolTiming/>}/>
       <Route path="/Academics/SubjectDistribution" element={<SubjectDistribution/>}/>
+      <Route path="/Admission/AdmissionProcedure" element={<AdmissionProcedure/>}/>
+      <Route path="/Admission/PrimarySchool" element={<PrimarySchool/>}/>
+      <Route path="/Admission/SecondrySchool" element={<SecondrySchool/>}/>
+      <Route path="/Admission/SeniorSchool" element={<SeniorSchool/>}/>
+      <Route path="/Admission/DownloadAdmissionForm" element={<DownloadAdmissionForm/>}/>
+      <Route path="/Admission/OnlineAdmissionForm" element={<OnlineAdmissionForm/>}/>
+      <Route path="/Admission/FeeStructure" element={<FeeStructure/>}/>
+      <Route path="/Admission/GeneralRules" element={<GeneralRules/>}/>
       
     
     </Routes>
