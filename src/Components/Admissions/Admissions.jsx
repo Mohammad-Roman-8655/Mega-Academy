@@ -15,7 +15,7 @@ function Admissions() {
           <NavLink className='lg:w-[40%] md:w-[40%] sm:w-[70%] w-[70%] text-center border-2 hover:border-black rounded-lg p-5 text-xl bg-blue-700 hover:bg-purple-400 text-white font-semibold hover:underline shadow-2xl' to='/Admission/DownloadAdmissionForm'>DOWNLOAD APPLICATION FORM</NavLink>
         </div>
         <div className='flex lg:flex-row md:flex-row sm:flex-col flex-col gap-4 items-center w-[100%] justify-center my-10'>
-           <NavLink className='lg:w-[40%] md:w-[40%] sm:w-[70%] w-[70%] text-center border-2 hover:border-black rounded-lg p-5 text-xl bg-blue-700 hover:bg-lime-300 text-white font-semibold hover:underline shadow-2xl' to='/Admission/SecondrySchool'>SECONDRY SCHOOL</NavLink>
+           <NavLink className='lg:w-[40%] md:w-[40%] sm:w-[70%] w-[70%] text-center border-2 hover:border-black rounded-lg p-5 text-xl bg-blue-700 hover:bg-lime-300 text-white font-semibold hover:underline shadow-2xl' to='/Admission/SecondrySchool'>MIDDLE SCHOOL</NavLink>
            <NavLink className='lg:w-[40%] md:w-[40%] sm:w-[70%] w-[70%] text-center border-2 hover:border-black rounded-lg p-5 text-xl bg-blue-700 hover:bg-green-300 text-white font-semibold hover:underline shadow-2xl' to='/Admission/OnlineAdmissionForm'>ONLINE APPLICATION FORM</NavLink>
         </div>
         <div className='flex lg:flex-row md:flex-row sm:flex-col flex-col gap-4 items-center w-[100%] justify-center my-10'>
