@@ -270,9 +270,7 @@ function OnlineAdmissionForm() {
                            <option value="Commerce">Commerce</option>
                            <option value="PCM">PCM</option>
                            <option value="PCB">PCB</option>
-                           <option value="Not-Eligible">Not Eligible</option>
-                          
-                           
+                           <option value="Not-Eligible">Not Eligible</option>    
                         </select>
               </div>  
           </div>   

@@ -26,6 +26,28 @@ import OnlineAdmissionForm from "./Components/Admissions/OnlineAdmissionForm"
 import FeeStructure from "./Components/Admissions/FeeStructure"
 import AdmissionProcedure from "./Components/Admissions/AdmissionProcedure"
 import GeneralRules from "./Components/Admissions/GeneralRules"
+import StudyNotes from "./Components/Resources/StudyNotes"
+import Pyq from "./Components/Resources/Pyq"
+import MockPapers from "./Components/Resources/MockPapers"
+import Syllabus from "./Components/Resources/Syllabus"
+import Textbook from "./Components/Resources/Textbook"
+import Assignments from "./Components/Resources/Assignments"
+import LessonPlans from "./Components/Resources/LessonPlans"
+import ReferenceBooks from "./Components/Resources/ReferenceBooks"
+import VideoTutorials from "./Components/Resources/VideoTutorials "
+import ExamSchedules from "./Components/Resources/ExamSchedules"
+import ExamTimetables from "./Components/Resources/ExamTimetables"
+import ProjectGuides from "./Components/Resources/ProjectGuides"
+import SchoolPolicies from "./Components/Resources/SchoolPolicies"
+import ParentalGuides from "./Components/Resources/ParentalGuides "
+import CareerGuides from "./Components/Resources/CareerGuidance"
+import HealthAndWellnessGuides from "./Components/Resources/HealthAndWellnessGuides"
+import ExtracurricularMaterials from "./Components/Resources/ExtracurricularMaterials"
+import ScholarshipInfo from "./Components/Resources/ScholarshipInfo"
+import AttendanceCertificate from "./Components/Resources/AttendanceCertificate"
+import FeeSubmissionForm from "./Components/Resources/FeeSubmissionForm"
+import MedicalCertificate from "./Components/Resources/MedicaleCertificateForm"
+import LeaveApplicationForm from "./Components/Resources/LeaveApplicationForm"
 import { BrowserRouter,Route ,Routes } from "react-router-dom"
 
 
@@ -62,6 +84,31 @@ function App() {
       <Route path="/Admission/OnlineAdmissionForm" element={<OnlineAdmissionForm/>}/>
       <Route path="/Admission/FeeStructure" element={<FeeStructure/>}/>
       <Route path="/Admission/GeneralRules" element={<GeneralRules/>}/>
+      <Route path="/Resources/StudyNotes" element={<StudyNotes/>}/>
+      <Route path="/Resources/Pyq" element={<Pyq/>}/>
+      <Route path="/Resources/MockPapers" element={<MockPapers/>}/>
+      <Route path="/Resources/Syllabus" element={<Syllabus/>}/>
+      <Route path="/Resources/Textbook" element={<Textbook/>}/>
+      <Route path="/Resources/Assignments" element={<Assignments/>}/>
+      <Route path="/Resources/LessonPlans" element={<LessonPlans/>}/>
+      <Route path="/Resources/ReferenceBooks" element={<ReferenceBooks/>}/>
+      <Route path="/Resources/VideoTutorials" element={<VideoTutorials/>}/>
+      <Route path="/Resources/ExamSchedules" element={<ExamSchedules/>}/>
+      <Route path="/Resources/ExamTimetables" element={<ExamTimetables/>}/>
+      <Route path="/Resources/ProjectGuides" element={<ProjectGuides/>}/>
+      <Route path="/Resources/SchoolPolicies" element={<SchoolPolicies/>}/>
+      <Route path="/Resources/ParentalGuides" element={<ParentalGuides/>}/>
+      <Route path="/Resources/CareerGuides" element={<CareerGuides/>}/>
+      <Route path="/Resources/HealthAndWellnessGuides" element={<HealthAndWellnessGuides/>}/>
+      <Route path="/Resources/ExtracurricularMaterials" element={<ExtracurricularMaterials/>}/>
+      <Route path="/Resources/ScholarshipInfo" element={<ScholarshipInfo/>}/>
+      <Route path="/Resources/AttendanceCertificate" element={<AttendanceCertificate/>}/>
+      <Route path="/Resources/MedicalCertificate" element={<MedicalCertificate/>}/>
+      <Route path="/Resources/FeeSubmissionForm" element={<FeeSubmissionForm/>}/>
+      <Route path="/Resources/LeaveApplicationForm" element={<LeaveApplicationForm/>}/>
+      
+
+      
       
     
     </Routes>
