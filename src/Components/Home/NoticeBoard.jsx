@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function NoticeBoard() {
+ 
   return (
    <div className=' lg:flex md:flex sm:block block justify-between w-[98%] lg:h-[50vh] md:h-[65vh] sm:h-[80vh]  h-[110vh] py-5 rounded-md lg:mx-5 md:mx-5 sm:mx-2 mx-2 lg:my-5 md:my-5 sm:my-2 my-2 bg-gradient-to-r from-sky-500 to-gray-700'>
          <div className='left-side lg:w-[50%] md:w-[50%] sm:w-[100%] w-[100%]'>

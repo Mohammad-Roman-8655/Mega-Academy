@@ -32,7 +32,7 @@ import MockPapers from "./Components/Resources/MockPapers"
 import Syllabus from "./Components/Resources/Syllabus"
 import Textbook from "./Components/Resources/Textbook"
 import Assignments from "./Components/Resources/Assignments"
-import LessonPlans from "./Components/Resources/LessonPlans"
+import ScholarshipInfo from "./Components/Resources/ScholarshipInfo"
 import ReferenceBooks from "./Components/Resources/ReferenceBooks"
 import VideoTutorials from "./Components/Resources/VideoTutorials "
 import ExamSchedules from "./Components/Resources/ExamSchedules"
@@ -42,8 +42,6 @@ import SchoolPolicies from "./Components/Resources/SchoolPolicies"
 import ParentalGuides from "./Components/Resources/ParentalGuides "
 import CareerGuides from "./Components/Resources/CareerGuidance"
 import HealthAndWellnessGuides from "./Components/Resources/HealthAndWellnessGuides"
-import ExtracurricularMaterials from "./Components/Resources/ExtracurricularMaterials"
-import ScholarshipInfo from "./Components/Resources/ScholarshipInfo"
 import AttendanceCertificate from "./Components/Resources/AttendanceCertificate"
 import FeeSubmissionForm from "./Components/Resources/FeeSubmissionForm"
 import MedicalCertificate from "./Components/Resources/MedicaleCertificateForm"
@@ -90,7 +88,6 @@ function App() {
       <Route path="/Resources/Syllabus" element={<Syllabus/>}/>
       <Route path="/Resources/Textbook" element={<Textbook/>}/>
       <Route path="/Resources/Assignments" element={<Assignments/>}/>
-      <Route path="/Resources/LessonPlans" element={<LessonPlans/>}/>
       <Route path="/Resources/ReferenceBooks" element={<ReferenceBooks/>}/>
       <Route path="/Resources/VideoTutorials" element={<VideoTutorials/>}/>
       <Route path="/Resources/ExamSchedules" element={<ExamSchedules/>}/>
@@ -100,7 +97,6 @@ function App() {
       <Route path="/Resources/ParentalGuides" element={<ParentalGuides/>}/>
       <Route path="/Resources/CareerGuides" element={<CareerGuides/>}/>
       <Route path="/Resources/HealthAndWellnessGuides" element={<HealthAndWellnessGuides/>}/>
-      <Route path="/Resources/ExtracurricularMaterials" element={<ExtracurricularMaterials/>}/>
       <Route path="/Resources/ScholarshipInfo" element={<ScholarshipInfo/>}/>
       <Route path="/Resources/AttendanceCertificate" element={<AttendanceCertificate/>}/>
       <Route path="/Resources/MedicalCertificate" element={<MedicalCertificate/>}/>

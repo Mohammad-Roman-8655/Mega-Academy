@@ -3,7 +3,7 @@ import React from 'react'
 function EnrollStatus() {
   return (
      <div className='w-full h-auto'>
-           <div>
+   <div>
         <h1 className="lg:text-[60px] md:text-[60px] sm:text-[50px] text-[40px] text-center font-bold my-10">Our Facilities</h1>
         <div className='w-full ml-[40px]'>
             <div className=' lg:w-[90%] md:w-[90%] sm:w-[100%] w-[100%]  lg:flex md:flex sm:block block  justify-center items-center lg:mx-10 md:mx-10 sm:mx-0 mx-0 text-justify'>

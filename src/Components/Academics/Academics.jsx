@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 function Academics() {
   return (
     <div >
-      <div className='w-full '>
+      <div className='w-full my-20 '>
 
         <div className='flex items-center  w-[80%] mx-auto p-5 m-5 text-center bg-blue-900 rounded-lg'>
           <h1 className='text-center text-2xl mx-auto text-white font-bold'>ACADEMICS</h1>
