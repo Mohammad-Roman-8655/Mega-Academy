@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CarouselShow from './CarouselShow'
 import NoticeBoard from './NoticeBoard'
 import Managers from './Managers'
@@ -10,8 +10,23 @@ import Footer from './Footer'
 import ConnectForm from './ConnectForm'
 
 function Home() {
+  const [data , setData] = useState('');
+
+  const test =async () => {
+    const response = await fetch('api/v1');
+    const data = await response.json();
+    console.log(data);
+    setData(data.message)
+    
+  }
+
+  useEffect(()=> {
+    test();
+  }, [])
+
   return (
     <div>
+      <div>{data}</div>
          <CarouselShow/>
          <NoticeBoard/>
          <AboutSchool/>
