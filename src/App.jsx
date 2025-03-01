@@ -53,7 +53,7 @@ function App() {
   return (
     <>
 <BrowserRouter>
-<NavBarTop/>
+       <NavBarTop/>
        <NavBarMain/>
        <Routes>
       <Route path="/" element={<Home/>}/>
