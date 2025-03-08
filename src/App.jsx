@@ -49,9 +49,14 @@ import LeaveApplicationForm from "./Components/Resources/LeaveApplicationForm"
 import { BrowserRouter,Route ,Routes } from "react-router-dom"
 
 
+
 function App() {
+  
+
+
   return (
     <>
+    
 <BrowserRouter>
        <NavBarTop/>
        <NavBarMain/>
@@ -109,7 +114,7 @@ function App() {
     
     </Routes>
 </BrowserRouter>
-
+ 
     </>
   )
 }

@@ -6,8 +6,9 @@ const ImageCarousel = ({ slides }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       goToNext();
-    }, 5000); // Change image every 5 seconds
+    }, 5000); 
     return () => clearInterval(timer);
+    
   }, [currentIndex]);
 
   const goToPrevious = () => {
@@ -23,15 +24,15 @@ const ImageCarousel = ({ slides }) => {
       {/* Image */}
       <div className="overflow-hidden rounded-lg shadow-lg aspect-video">
         <img
-          src={slides[currentIndex].image}
-          alt={slides[currentIndex].caption}
+          src={slides[currentIndex].img}
+          alt={slides[currentIndex].title}
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Caption and Description */}
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4 text-white">
-        <h2 className="text-xl md:text-2xl font-semibold text-center mb-2">{slides[currentIndex].caption}</h2>
+        <h2 className="text-xl md:text-2xl font-semibold text-center mb-2">{slides[currentIndex].title}</h2>
         <p className="text-xs md:text-sm text-center mb-3">{slides[currentIndex].description}</p>
       </div>
 
