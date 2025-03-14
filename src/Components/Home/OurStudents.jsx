@@ -2,8 +2,28 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState,useEffect } from "react";
 
 function OurStudents() {
+
+  const [Students, setStudents] = useState([]);
+
+  // Fetch students with optional filtering by standard
+  const fetchStudents = async () => {
+    try {
+     
+      const response = await fetch("http://localhost:8080/Student");
+      const data = await response.json();
+      setStudents(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  // Fetch all students on component mount
+  useEffect(() => {
+    fetchStudents();
+  }, []);
     var settings = {
         dots: true,
         infinite: true,
@@ -47,17 +67,17 @@ function OurStudents() {
        <Slider {...settings} className="slider-container">
        
        {
-        data.map((tdata)=>{
+        Students.map((student,idx)=>{
           return (
-            <div key={tdata.id} className='bg-white  lg:h-[450px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
+            <div key={idx} className='bg-white  lg:h-[400px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
             <div className=' flex justify-center text-center items-center bg-blue-500  rounded-t-xl'>
-              <img  className=" rounded-full"src={tdata.profile} alt="Teachers img" />
+              <img  className=" rounded-full w-40 h-40 p-3"src={student.photo} alt="Teachers img" />
             </div>
-            <div className="decs flex flex-col justify-center items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 lg:mt-7 md:mt-4 sm:mt-3 mt-3">
-              <h1 className='lg:text-2xl md:text-xl sm:text-xl text-xl font-bold'> {tdata.Name}</h1>
-              <h2 >Class : <span  className='font-semibold'>{tdata.Class}</span></h2>
-              <h3>Division : <span className='font-bold'>{tdata.Division}</span></h3>
-              <h3>City : <span className='font-semibold'>{tdata.City}</span></h3>
+            <div className="decs flex flex-col justify-start items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 lg:mt-7 md:mt-4 sm:mt-3 mt-3">
+              <h1 className='lg:text-2xl md:text-xl sm:text-xl text-xl font-bold'> {student.studentName}</h1>
+              <h2 >Class : <span  className='font-semibold'>{student.standard}</span></h2>
+              <h3>Division : <span className='font-bold'>{student.division}</span></h3>
+              <h3>City : <span className='font-semibold text-[13px]'>{student.address}</span></h3>
             </div>
           </div>
           )

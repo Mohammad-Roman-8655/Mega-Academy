@@ -1,7 +1,21 @@
 import React from 'react';
-
+import { useState,useEffect } from 'react';
 function NoticeBoard() {
- 
+  const [Notices, setNotices] = useState([]);
+   
+   const fetchNotices = async () => {
+     try {
+       const response = await fetch("http://localhost:8080/Notice");
+       const data = await response.json();
+       setNotices(data);
+     } catch (error) {
+       console.error("Error:", error);
+     }
+   };
+   
+   useEffect(() => {
+     fetchNotices();
+   }, []);
   return (
    <div className=' lg:flex md:flex sm:block block justify-between w-[98%] lg:h-[50vh] md:h-[65vh] sm:h-[80vh]  h-[110vh] py-5 rounded-md lg:mx-5 md:mx-5 sm:mx-2 mx-2 lg:my-5 md:my-5 sm:my-2 my-2 bg-gradient-to-r from-sky-500 to-gray-700'>
          <div className='left-side lg:w-[50%] md:w-[50%] sm:w-[100%] w-[100%]'>
@@ -10,14 +24,15 @@ function NoticeBoard() {
                  <h3 className='text-[30px] font-semibold mx-auto text-center text-white'><i className="fa-solid fa-bullhorn mr-6 mx-auto"></i>Notices Board</h3>
               </div>
               <div className=' p-5 border-2 lg:m-5 md:mx-5 md:my-5 sm:mx-2 sm:my-5 mx-3 my-5 rounded hover:border-black overflow-scroll overflow-x-hidden h-[30vh] bg-white'>
-                <p className='underline p-1 text-green-600'><a href="">Notice 1: Admission Open 24-25</a></p>
-                <p className='underline p-1 text-green-600'><a href="https://drive.google.com/file/d/1lMYJlAukjciAxwi0GR2ZY3NEEI8WsUWu/view?usp=drive_link">Notice 2: Academic Calendar 2024-25</a></p>
-                <p className='underline p-1 text-green-600'><a href="">Notice 3: School will remain closed on September 20th</a></p>
-                <p className='underline p-1 text-green-600'><a href="">Notice 4: Parent-teacher meeting on September 25th.</a></p>
-               <p className='underline p-1 text-red-500'> <a href="">Notice 5: Admission open for 2024-25 from Nursery to 8th class.</a></p>
-               <p className='underline p-1 text-red-500'><a href="">Notice 6: Sports day event on October 10th.</a></p>
-                <p className='underline p-1 text-red-500'><a href="">Notice 7: Annual cultural event on December 15th.</a></p>
-               <p className='underline p-1 text-red-500'> <a href="">Notice 8: Admission Open 24-25</a></p>
+                {Notices.map((notice,idx)=>{
+                  return(
+                    <div className='flex justify-between items-center'>
+                      <p className=' p-1 text-green-600'><span>{idx+1}.   </span><a  className="underline mr-2" href={notice.link}>{notice.title} </a>  ({notice.status})</p>  
+                      <span className='p-1 text-green-600'>{notice.publishDate}</span>
+                    </div>
+                  )
+                })}
+               
                
               </div>
           <div>

@@ -4,32 +4,23 @@ import ImageCarousel from './ImageCarousel';
 import { useState,useEffect } from 'react';
 
 function CarouselShow() {
-  // const [data,setData]=useState({});
+//  const [Slides, setSlides] = useState([]);
+     
+//      const fetchSlides = async () => {
+//        try {
+//          const response = await fetch("http://localhost:8080/ImageCarousel");
+//          const data = await response.json();
+//          console.log(data);
+//         setSlides(data);
+//        } catch (error) {
+//          console.error("Error:", error);
+//        }
+//      };
+     
+//      useEffect(() => {
+//        fetchSlides();
+//      }, []);
 
-  // useEffect(()=>{
-  //         fetchData();
-  // },[]);
-
-  // const fetchData = async () => {
-  //   try {
-  //     // Make a GET request using the Fetch API
-  //     const Carousel = await fetch('http://localhost:8080/api/ImageCarousel');
-      
-  //     // Check if the response is successful (status code 200-299)
-  //     if (!Carousel.ok) {
-  //       throw new Error('Network response was not ok');
-  //     }
-
-  //     // Parse the JSON data from the response
-  //     const result = await Carousel.json();
-  //     console.log(result);
-
-  //     // Update the state with the fetched data
-  //     setData(result);
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error.message);
-  //   }
-  // };
     const slides = [
         {
           img: 'https://res.cloudinary.com/dcxlcy6ls/image/upload/v1726388151/dvsomzznh8uvv8xmz6lf.png',
