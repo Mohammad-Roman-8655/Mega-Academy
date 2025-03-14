@@ -12,7 +12,7 @@ function OurStudents() {
   const fetchStudents = async () => {
     try {
      
-      const response = await fetch("http://localhost:8080/Student");
+      const response = await fetch("http://localhost:8080/api/Student");
       const data = await response.json();
       setStudents(data);
     } catch (error) {
@@ -69,11 +69,11 @@ function OurStudents() {
        {
         Students.map((student,idx)=>{
           return (
-            <div key={idx} className='bg-white  lg:h-[400px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
+            <div key={idx} className='bg-white  lg:h-[380px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
             <div className=' flex justify-center text-center items-center bg-blue-500  rounded-t-xl'>
               <img  className=" rounded-full w-40 h-40 p-3"src={student.photo} alt="Teachers img" />
             </div>
-            <div className="decs flex flex-col justify-start items-center lg:gap-4 md:gap-3 sm:gap-3 gap-2 lg:mt-7 md:mt-4 sm:mt-3 mt-3">
+            <div className="decs flex flex-col justify-start ml-5 lg:gap-2 md:gap-2 sm:gap-2 gap-1 lg:mt-5 md:mt-4 sm:mt-3 mt-3">
               <h1 className='lg:text-2xl md:text-xl sm:text-xl text-xl font-bold'> {student.studentName}</h1>
               <h2 >Class : <span  className='font-semibold'>{student.standard}</span></h2>
               <h3>Division : <span className='font-bold'>{student.division}</span></h3>

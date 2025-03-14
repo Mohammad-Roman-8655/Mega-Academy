@@ -5,7 +5,7 @@ function NoticeBoard() {
    
    const fetchNotices = async () => {
      try {
-       const response = await fetch("http://localhost:8080/Notice");
+       const response = await fetch("http://localhost:8080/api/Notice");
        const data = await response.json();
        setNotices(data);
      } catch (error) {
@@ -26,7 +26,7 @@ function NoticeBoard() {
               <div className=' p-5 border-2 lg:m-5 md:mx-5 md:my-5 sm:mx-2 sm:my-5 mx-3 my-5 rounded hover:border-black overflow-scroll overflow-x-hidden h-[30vh] bg-white'>
                 {Notices.map((notice,idx)=>{
                   return(
-                    <div className='flex justify-between items-center'>
+                    <div key={idx} className='flex justify-between items-center'>
                       <p className=' p-1 text-green-600'><span>{idx+1}.   </span><a  className="underline mr-2" href={notice.link}>{notice.title} </a>  ({notice.status})</p>  
                       <span className='p-1 text-green-600'>{notice.publishDate}</span>
                     </div>

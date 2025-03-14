@@ -2,10 +2,45 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState,useEffect } from "react";
 
 
 
 function OurTeacher() {
+
+  const [Teachers, setTeachers] = useState([]);
+  
+  const fetchTeachers = async () => {
+    try {
+      const response = await fetch("http://localhost:8080/api/Teacher");
+      const data = await response.json();
+      setTeachers(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchTeachers();
+  }, []); 
+
+  const calculateExperience = (startDate) => {
+    if (!startDate) return "0"; // Handle cases where startDate is not provided
+  
+    const start = new Date(startDate);
+    const today = new Date();
+  
+    let years = today.getFullYear() - start.getFullYear();
+    let months = today.getMonth() - start.getMonth();
+  
+    if (months < 0 || (months === 0 && today.getDate() < start.getDate())) {
+      years--; // Reduce one year if the current month is before the start month
+    }
+  
+    return years > 0 ? years : "0"; // Ensure it doesn't return negative values
+  };
+  
+
   var settings = {
     dots: true,
     infinite: true,
@@ -49,16 +84,18 @@ function OurTeacher() {
      <Slider {...settings} className="slider-container">
      
      {
-      data.map((tdata)=>{
+      Teachers.map((teacher,idx)=>{
         return (
-          <div key={tdata.id} className='bg-white  h-[450px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
+          <div key={idx} className='bg-white  h-[450px] text-black rounded-xl border-2 shadow-xl hover:shadow-2xl'>
           <div className='h-56 flex justify-center text-center items-center bg-blue-500  rounded-t-xl'>
-            <img  className="h-44 w-44 rounded-full"src={tdata.profile} alt="Teachers img" />
+            <img  className="h-44 w-44 rounded-full"src={teacher.photo} alt="Teachers img" />
           </div>
-          <div className="decs flex flex-col justify-center items-center gap-4 mt-7">
-            <h1 className='text-2xl font-bold'>{tdata.Name}</h1>
-            <h2 >Subject Taught : <span  className='font-semibold'>{tdata.Subject}</span></h2>
-            <h3>Experience : <span className='font-semibold'>{tdata.Exp}+ years</span></h3>
+          <div className="decs flex flex-col justify-start items-start ml-8 gap-4 mt-4">
+            <h1 className='text-2xl font-bold'>{teacher.name}</h1>
+            <h2 >Subject Taught : <span  className='font-semibold'>{teacher.subject}</span></h2>
+            <h2 >Email : <span  className='font-semibold'>{teacher.email}</span></h2>
+            <h2 >Phone : <span  className='font-semibold'>{teacher.phoneNo}</span></h2>
+            <h3>Experience: <span className="font-semibold">{calculateExperience(teacher.experience)}+ years</span></h3>
           </div>
         </div>
         )
