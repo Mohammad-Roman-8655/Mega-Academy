@@ -11,7 +11,7 @@ function VideoTutorials () {
     const fetchVideoTutorials = async (standard = "", subjectName = "") => {
       try {
         const url = (standard && subjectName)
-          ? `http://localhost:8080/VideoTutorial?standard=${standard}&subjectName=${subjectName}`
+          ? `http://localhost:8080/api/VideoTutorial?standard=${standard}&subjectName=${subjectName}`
           : "";
         const response = await fetch(url);
         const data = await response.json();
@@ -90,11 +90,14 @@ function VideoTutorials () {
         <table className='border-collapse border border-black mx-auto lg:w-[85%] md:w-[85%] sm:w-[95%] w-[95%] text-center shadow-3xl'>
         
          <caption className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 lg:text-2xl md:text-2xl sm:text-xl text-xl font-bold bg-blue-900 text-white'>Science</caption>
-          <tr>
+         <thead>
+         <tr>
             <th className='border border-black lg:p-4 md:p-4 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '>Chapter No.</th>
             <th className='border border-black lg:p-4 md:p-4 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '>Chapter Name</th>
             <th className='border border-black lg:p-4 md:p-4 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md'>Watch Tutorials</th>
           </tr>
+         </thead>
+         <tbody>
           {
         VideoTutorials.map((VideoTutorial,idx)=>{
           return(
@@ -106,6 +109,7 @@ function VideoTutorials () {
           )
         })
       }
+      </tbody>
         </table>
 
       </div>

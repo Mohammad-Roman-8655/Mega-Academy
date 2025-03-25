@@ -5,7 +5,7 @@ function Managers() {
 
 const fetchManagers = async () => {
   try {
-    const response = await fetch("http://localhost:8080/Manager");
+    const response = await fetch("http://localhost:8080/api/Manager");
     const data = await response.json();
     setManagers(data);
   } catch (error) {

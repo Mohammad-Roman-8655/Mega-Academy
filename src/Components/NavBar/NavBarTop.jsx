@@ -25,7 +25,7 @@ function NavBarTop() {
         <div className="contact flex items-center gap-8 ">
            <div className='flex items-center gap-2'>
            <i className="fa-regular fa-envelope"></i>
-            <p>mohammadroman8655@gmail.com</p>
+            <p>megaacademy@gmail.com</p>
            </div>
            <p>|</p>
            <div className='flex items-center gap-1'>

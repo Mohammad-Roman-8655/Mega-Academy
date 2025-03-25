@@ -7,7 +7,8 @@ import Admissions from "./Components/Admissions/Admissions"
 import Contact from "./Components/Contact/Contact"
 import Facilities from "./Components/Facilities/Facilities"
 import Resources from "./Components/Resources/Resources"
-import Login from "./Components/LoginPage/Login"
+import Login from "./Components/LoginAndLogout/Login"
+import Register from "./Components/LoginAndLogout/Register"
 import AcademicCalender from "./Components/Academics/AcademicCalender"
 import ArtEducation from "./Components/Academics/ArtEducation"
 import BookAndUniform from "./Components/Academics/BookAndUniform"
@@ -46,6 +47,7 @@ import AttendanceCertificate from "./Components/Resources/AttendanceCertificate"
 import FeeSubmissionForm from "./Components/Resources/FeeSubmissionForm"
 import MedicalCertificate from "./Components/Resources/MedicaleCertificateForm"
 import LeaveApplicationForm from "./Components/Resources/LeaveApplicationForm"
+import { AuthProvider } from "./Context/AuthContext"
 import { BrowserRouter,Route ,Routes } from "react-router-dom"
 
 
@@ -56,7 +58,7 @@ function App() {
 
   return (
     <>
-    
+    <AuthProvider>
 <BrowserRouter>
        <NavBarTop/>
        <NavBarMain/>
@@ -69,6 +71,7 @@ function App() {
       <Route path="/About" element={<About/>}/>
       <Route path="/Contact" element={<Contact/>}/>
       <Route path="/Login" element={<Login/>}/>
+      <Route path="/Register" element={<Register/>}/>
       <Route path="/Academics/AcademicCalender" element={<AcademicCalender/>}/>
       <Route path="/Academics/ArtEducation" element={<ArtEducation/>}/>
       <Route path="/Academics/BookAndUniform" element={<BookAndUniform/>}/>
@@ -114,6 +117,7 @@ function App() {
     
     </Routes>
 </BrowserRouter>
+</AuthProvider>
  
     </>
   )

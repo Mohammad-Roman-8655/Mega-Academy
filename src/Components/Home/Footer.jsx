@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full mt-20 lg:h-[40vh] md:h-auto sm:h-auto h-auto lg:mx-0 md:mx-0 sm:mx-auto mx-auto bg-gradient-to-r from-sky-500 to-gray-700 text-white lg:mx-0 md:mx-0 sm:mx-auto mx-auto p-10'>
+    <div className='w-full mt-20 lg:h-[40vh] md:h-auto sm:h-auto h-auto   bg-gradient-to-r from-sky-500 to-gray-700 text-white lg:mx-0 md:mx-0 sm:mx-auto mx-auto p-10'>
         <div className='lg:flex md:block sm:block block justify-around items-center  text-center '>
             <div className='flex items-center gap-2   lg:mb-20 md:mb-20 sm:mb-10 mb-10 lg:ml-[0%] md:ml-[30%] sm:ml-[5%] ml-[5%]'>
                 <img className='w-20 h-20' src="https://res.cloudinary.com/dcxlcy6ls/image/upload/v1726293382/yhpdbi2y3dcplciev0oz.png" alt="mega-logo" />

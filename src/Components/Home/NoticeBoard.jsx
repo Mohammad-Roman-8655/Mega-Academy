@@ -1,6 +1,8 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState,useEffect,useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 function NoticeBoard() {
+  const navigate=useNavigate();
   const [Notices, setNotices] = useState([]);
    
    const fetchNotices = async () => {
@@ -16,31 +18,68 @@ function NoticeBoard() {
    useEffect(() => {
      fetchNotices();
    }, []);
+   const scrollRef = useRef(null);
+   const [isPaused, setIsPaused] = useState(false);
+ 
+   useEffect(() => {
+     let scrollInterval;
+ 
+     const startScrolling = () => {
+       if (!isPaused && scrollRef.current) {
+         scrollInterval = setInterval(() => {
+           let scrollContainer = scrollRef.current;
+           scrollContainer.scrollTop += 1; // Move down
+ 
+           // If scrolled to the bottom, reset smoothly
+           if (
+             scrollContainer.scrollTop + scrollContainer.clientHeight >=
+             scrollContainer.scrollHeight
+           ) {
+             setTimeout(() => {
+               scrollContainer.scrollTop = 0; // Restart from top
+              
+             }, 1000); // 1 sec delay before restarting
+           }
+         }, 50); // Adjust speed
+       }
+     };
+     
+      startScrolling();
+     
+    
+     return () => clearInterval(scrollInterval); // Cleanup
+   }, [isPaused]);
+
   return (
    <div className=' lg:flex md:flex sm:block block justify-between w-[98%] lg:h-[50vh] md:h-[65vh] sm:h-[80vh]  h-[110vh] py-5 rounded-md lg:mx-5 md:mx-5 sm:mx-2 mx-2 lg:my-5 md:my-5 sm:my-2 my-2 bg-gradient-to-r from-sky-500 to-gray-700'>
-         <div className='left-side lg:w-[50%] md:w-[50%] sm:w-[100%] w-[100%]'>
-             <div className=' items-center'>
-   
-                 <h3 className='text-[30px] font-semibold mx-auto text-center text-white'><i className="fa-solid fa-bullhorn mr-6 mx-auto"></i>Notices Board</h3>
-              </div>
-              <div className=' p-5 border-2 lg:m-5 md:mx-5 md:my-5 sm:mx-2 sm:my-5 mx-3 my-5 rounded hover:border-black overflow-scroll overflow-x-hidden h-[30vh] bg-white'>
-                {Notices.map((notice,idx)=>{
-                  return(
-                    <div key={idx} className='flex justify-between items-center'>
-                      <p className=' p-1 text-green-600'><span>{idx+1}.   </span><a  className="underline mr-2" href={notice.link}>{notice.title} </a>  ({notice.status})</p>  
-                      <span className='p-1 text-green-600'>{notice.publishDate}</span>
-                    </div>
-                  )
-                })}
-               
-               
-              </div>
-          <div>
+          <div className="left-side lg:w-[50%] md:w-[50%] sm:w-[100%] w-[100%]">
+      <div className="items-center">
+        <h3 className="text-[30px] font-semibold mx-auto text-center text-white">
+          <i className="fa-solid fa-bullhorn mr-6 mx-auto"></i>Notices Board
+        </h3>
+      </div>
 
-       
-
-   </div>
-   </div>
+      {/* Notice Board */}
+      <div
+        ref={scrollRef}
+        className="p-5 border-2 lg:m-5 md:mx-5 md:my-5 sm:mx-2 sm:my-5 mx-3 my-5 rounded hover:border-black overflow-y-scroll overflow-x-hidden h-[30vh] bg-white"
+        onMouseEnter={() => setIsPaused(true)}  // Stop scrolling on hover
+        onMouseLeave={() => setIsPaused(false)} // Resume scrolling on leave
+      >
+        {Notices.map((notice, idx) => (
+          <div key={idx} className="flex justify-between items-center">
+            <p className="p-1 text-green-600">
+              <span>{idx + 1}. </span>
+              <a className="underline mr-2" href={notice.link}>
+                {notice.title}
+              </a>{" "}
+              ({notice.status})
+            </p>
+            <span className="p-1 text-green-600">{notice.publishDate}</span>
+          </div>
+        ))}
+      </div>
+    </div>
    <div className='right-side lg:w-[50%] md:w-[50%] sm:w-[100%] w-[100%]  mr-7'>
              <div className=' items-center'>
    
@@ -48,7 +87,7 @@ function NoticeBoard() {
               </div>
               <div className=' text-justify mt-5  hover:border-black rounded lg:mx-5 md:mx-5 sm:mx-2 mx-2 h-[30vh]  text-gray-300'>
                 <p className='p-5 text-wrap lg:text-md md:text-md sm:text-sm text-sm'>Mega Academy, located at Aijaz Nagar, Near Kisaan Path, Achramau Road, Kisan Path, Ancharamau, Uttar Pradesh, is pleased to announce that admissions are now open for the academic session 2024-25. As an English medium school, we offer a vibrant and nurturing learning environment from Nursery to 8th class. With limited seats available, this is a fantastic opportunity for your child to receive quality education with a focus on academic excellence and overall development. Don't miss out—hurry and secure your child’s admission today! </p>
-                <button className='border-2 hover:border-black hover:bg-white hover:text-black text-lg font-bold ml-5 px-2 py-1 rounded-md'>Apply here!</button> 
+                <button onClick={()=> navigate('/Admission/OnlineAdmissionForm')}className='border-2 hover:border-black hover:bg-white hover:text-black text-lg font-bold ml-5 px-2 py-1 rounded-md'>Apply here!</button> 
              </div>
              
              

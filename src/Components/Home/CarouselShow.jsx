@@ -8,7 +8,7 @@ function CarouselShow() {
      
 //      const fetchSlides = async () => {
 //        try {
-//          const response = await fetch("http://localhost:8080/ImageCarousel");
+//          const response = await fetch("http://localhost:8080/api/ImageCarousel");
 //          const data = await response.json();
 //          console.log(data);
 //         setSlides(data);

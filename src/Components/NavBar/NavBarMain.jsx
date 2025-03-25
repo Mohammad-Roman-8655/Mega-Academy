@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import { AuthContext } from "../../Context/AuthContext";
 import { NavLink } from 'react-router-dom';
 
 
 
 function NavBarMain() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <div className="flex items-center justify-between px-5 pt-5 pb-4 w-full bg-gradient-to-r from-sky-500 to-gray-700 text-white sticky top-0 z-50">
@@ -26,12 +28,27 @@ function NavBarMain() {
         <NavLink className="hover:text-black transition" to="/Facilities">Facilities</NavLink>
         <NavLink className="hover:text-black transition" to="/About">About</NavLink>
         <NavLink className="hover:text-black transition" to="/Contact">Contact</NavLink>
-        <NavLink
+        {/* <NavLink
           className="text-sm md:text-lg border-2 border-white px-2 py-1 rounded-md hover:text-black transition"
           to="/Login"
         >
           Login/Register
-        </NavLink>
+        </NavLink> */}
+        <div>
+        {user ? (
+          <>
+            <span className="mr-4">Welcome, {user.username}</span>
+            <button onClick={logout} className="bg-red-500 px-3 py-1 rounded">
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <NavLink to="/login" className="mr-4">Login</NavLink>
+            <NavLink to="/register">Register</NavLink>
+          </>
+        )}
+      </div>
       </div>
 
       {/* Mobile Menu Toggle */}

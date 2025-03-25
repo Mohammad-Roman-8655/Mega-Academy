@@ -10,7 +10,7 @@ function Syllabus() {
     const fetchSyllabuses = async (standard = "") => {
       try {
         const url = standard
-          ? `http://localhost:8080/Syllabus?standard=${standard}`
+          ? `http://localhost:8080/api/Syllabus?standard=${standard}`
           : "";
         const response = await fetch(url);
         const data = await response.json();
@@ -73,11 +73,14 @@ function Syllabus() {
         <table className='border-collapse border border-black  mx-auto lg:w-[85%] md:w-[85%] sm:w-[98%] w-[98%] text-center shadow-3xl'>
         
          <caption className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 lg:text-2xl md:text-2xl sm:text-xl text-xl font-bold bg-blue-900 text-white'>Syllabus List</caption>
-          <tr>
+         <thead>
+         <tr>
             <th className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '> Serial No.</th>
             <th className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '>Subject Name</th>
             <th className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md'>Download</th>
           </tr>
+         </thead>
+         <tbody>
           {
         Syllabuses.map((Syllabus,idx)=>{
           return(
@@ -89,6 +92,7 @@ function Syllabus() {
           )
         })
       }
+      </tbody>
         </table>
 
       </div>

@@ -9,7 +9,7 @@ function Assignments() {
     const fetchAssignments = async (standard = "") => {
       try {
         const url = standard
-          ? `http://localhost:8080/Assignment?standard=${standard}`
+          ? `http://localhost:8080/api/Assignment?standard=${standard}`
           : "";
         const response = await fetch(url);
         const data = await response.json();
@@ -71,7 +71,8 @@ function Assignments() {
         <table className='border-collapse border border-black  mx-auto lg:w-[85%] md:w-[85%] sm:w-[98%] w-[98%] text-center shadow-3xl'>
         
          <caption className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 lg:text-2xl md:text-2xl sm:text-xl text-xl font-bold bg-blue-900 text-white'>Vacations Assignment List</caption>
-          <tr>
+            <thead>
+            <tr>
             <th  rowSpan={2} className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '> Serial No.</th>
             <th rowSpan={2} className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '>Subject Name</th>
             <th  colSpan={2} className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md'>Download</th>
@@ -81,6 +82,8 @@ function Assignments() {
             <th  className='border border-black lg:p-5 md:p-5 sm:p-2 p-2 bg-blue-500 text-white lg:text-lg md:text-lg sm:text-md text-md '>Winter Assignments</th>
         
           </tr>
+            </thead>
+            <tbody>
           {
         Assignments.map((Assignment,idx)=>{
           return(
@@ -93,6 +96,7 @@ function Assignments() {
           )
         })
       }
+      </tbody>
         </table>
 
       </div>
