@@ -39,7 +39,7 @@ function Assignments() {
     <label htmlFor="Standards" className='font-semibold mb-2'>Select Class<span className='text-red-600 font-bold'>*</span></label>
 
         <select id="Standards" className='border-2  h-10 rounded-md ' value={selectedStandard} onChange={handleStandardChange}>
-                <option value="Standards" className='p-2'>Select Class </option>
+                <option value="" className='p-2'>Select Class </option>
                 <option value="Pre-Nursery">Pre-Nursery</option>
                 <option value="Nursery">Nursery</option>
                 <option value="LKG">LKG</option>

@@ -50,14 +50,34 @@ import LeaveApplicationForm from "./Components/Resources/LeaveApplicationForm"
 import { AuthProvider } from "./Context/AuthContext"
 import { BrowserRouter,Route ,Routes } from "react-router-dom"
 
-
+import { useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem("token");
+    if (!isAuthenticated) {
+      setTimeout(() => {
+        toast.info("Login to access full features!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      }, 2000);
+    }
+  }, []);
+
 
 
   return (
     <>
+     <div>
+      <ToastContainer />
+    </div>
     <AuthProvider>
 <BrowserRouter>
        <NavBarTop/>
