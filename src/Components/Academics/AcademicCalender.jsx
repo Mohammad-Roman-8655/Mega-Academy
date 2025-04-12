@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 
 function AcademicCalender() {
   const [AcademicCalenders, setAcademicCalenders] = useState([]);
       
   const fetchAcademicCalenders = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/AcademicCalender");
+      const response = await fetch(`${API_URL}/api/AcademicCalender`);
       const data = await response.json();
       setAcademicCalenders(data);
     } catch (error) {
