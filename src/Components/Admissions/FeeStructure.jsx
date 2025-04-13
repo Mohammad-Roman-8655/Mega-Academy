@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 
 // Core viewer
 
@@ -55,7 +56,7 @@ function FeeStructure() {
             {
               DownloadForms.map((DownloadForm,idx) => {
                 return (
-                  <a  href={DownloadForm.feeStructure} className='lg:w-[30%] md:w-[30%] sm:w-[70%] w-[70%]  text-center border-2 hover:border-black rounded-lg p-5  text-xl  bg-blue-700 hover:bg-pink-300 text-white font-semibold hover:underline shadow-2xl '>Download Fee Structure</a>
+                  <a key={idx} href={DownloadForm.feeStructure} className='lg:w-[30%] md:w-[30%] sm:w-[70%] w-[70%]  text-center border-2 hover:border-black rounded-lg p-5  text-xl  bg-blue-700 hover:bg-pink-300 text-white font-semibold hover:underline shadow-2xl '>Download Fee Structure</a>
                 )
               })
             }

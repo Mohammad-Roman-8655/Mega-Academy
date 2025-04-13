@@ -24,7 +24,7 @@ function AttendanceCertificate() {
     {
             DownloadForms.map((DownloadForm,idx) => {
              return (
-              <a  href={DownloadForm.attendanceCertificate} className='lg:w-[30%] md:w-[30%] sm:w-[70%] w-[70%]  text-center border-2 hover:border-black rounded-lg p-5  text-xl  bg-blue-700 hover:bg-pink-300 text-white font-semibold hover:underline shadow-2xl '>Download Attendance Certificate</a> 
+              <a key={idx}  href={DownloadForm.attendanceCertificate} className='lg:w-[30%] md:w-[30%] sm:w-[70%] w-[70%]  text-center border-2 hover:border-black rounded-lg p-5  text-xl  bg-blue-700 hover:bg-pink-300 text-white font-semibold hover:underline shadow-2xl '>Download Attendance Certificate</a> 
              )
             })
            }

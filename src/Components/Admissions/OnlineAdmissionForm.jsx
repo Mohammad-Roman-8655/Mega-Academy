@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config/apiConfig';
 
 function OnlineAdmissionForm() {
 
@@ -166,15 +167,18 @@ function OnlineAdmissionForm() {
               <label for="DOB" className='font-semibold mb-2'>Date Of Birth(DOB)<span className='text-red-600 font-bold'>*</span></label>
               <input type="date" id="DOB" name='DOB' value={newAdmissionForm.DOB} onChange={handleInputChange} className='border-2 p-5 h-10 rounded-md w-[100%] '  />
             </div>
-            <div className="father-gender lg:w-[30%] md:w-[90%] sm:w-[90%] w-[90%] lg:mx-0 md:mx-auto sm:mx-auto mx-auto lg:mb-0 md:mb-5 sm:mb-5  mb-5">
-            <label className='font-semibold mb-3'>Gender <span className='text-red-600 font-bold'>*</span></label>
-            <select name='gender' value={newAdmissionForm.gender} onChange={handleInputChange} id=""  className='border-2  h-10 rounded-md '>
+            
+            <div className="father-gender lg:w-[30%] md:w-[90%] sm:w-[90%] w-[90%] lg:mx-0 md:mx-auto sm:mx-auto mx-auto flex flex-col lg:mb-0 md:mb-5 sm:mb-5  mb-5">
+            <label className='font-semibold mb-2'>Gender <span className='text-red-600 font-bold'>*</span></label>
+            <select name='gender' value={newAdmissionForm.gender} onChange={handleInputChange} id=""  className='border-2  h-10 rounded-md  '>
               <option value="">Select Gender :</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
             </select>
+            
             </div>
+          
           </div>
           <div className="row-2 flex justify-between lg:flex-row md:flex-col sm:flex-col flex-col w-full mb-5">
               <div className="mobile-number lg:w-[30%] md:w-[90%] sm:w-[90%] w-[90%] lg:mx-0 md:mx-auto sm:mx-auto mx-auto lg:mb-0 md:mb-5 sm:mb-5  mb-5">
