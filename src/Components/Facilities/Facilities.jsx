@@ -64,7 +64,7 @@ function Facilities() {
       </div>
       <div className='my-20'>
         <h1 className="lg:text-[60px] md:text-[60px] sm:text-[50px] text-[40px] text-center font-bold my-5">Our Facilities</h1>
-        <div className='w-full ml-[40px]'>
+        <div className='w-full mx-auto'>
             <div className=' lg:w-[90%] md:w-[90%] sm:w-[100%] w-[100%]  lg:flex md:flex sm:block block  justify-center items-center lg:mx-10 md:mx-10 sm:mx-0 mx-0 text-justify'>
                 <div className=' overflow-hidden  h-[270px] lg:w-1/4 md:w-1/4 sm:w-[80%] w-[80%] text-center lg:m-5 md:m-5 sm:m-0 m-0  lg:mb-0 md:mb-4 sm:mb-4 mb-4 border-2 p-7 rounded-md border-blue-400 hover:text-white  hover:bg-pink-400 hover:border-black'>
                    <i className="fa-solid fa-school  text-5xl animate-bounce"></i>
@@ -115,7 +115,7 @@ function Facilities() {
 
 
     </div>
-    <div className='w-full mt-20 lg:h-[40vh] md:h-auto sm:h-auto h-auto lg:mx-0 md:mx-0 sm:mx-auto mx-auto bg-gradient-to-r from-sky-500 to-gray-700 text-white lg:mx-0 md:mx-0 sm:mx-auto mx-auto p-10'>
+    <div className='w-full mt-20 lg:h-[40vh] md:h-auto sm:h-auto h-auto  bg-gradient-to-r from-sky-500 to-gray-700 text-white lg:mx-0 md:mx-0 sm:mx-auto mx-auto p-10'>
         <div className='lg:flex md:block sm:block block justify-around items-center  text-center '>
             <div className='flex items-center gap-2   lg:mb-20 md:mb-20 sm:mb-10 mb-10 lg:ml-[0%] md:ml-[30%] sm:ml-[5%] ml-[5%]'>
                 <img className='w-20 h-20' src="https://res.cloudinary.com/dcxlcy6ls/image/upload/v1726293382/yhpdbi2y3dcplciev0oz.png" alt="mega-logo" />
