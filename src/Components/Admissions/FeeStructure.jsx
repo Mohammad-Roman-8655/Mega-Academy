@@ -11,7 +11,7 @@ function FeeStructure() {
    const [DownloadForms, setDownloadForm] =useState([]);
     
       const fetchDownloadForm = async () => {
-        const response = await fetch("http://localhost:8080/api/download-form");
+        const response = await fetch(`${API_URL}/api/download-form`);
         const data = await response.json();
         setDownloadForm(data);
       }

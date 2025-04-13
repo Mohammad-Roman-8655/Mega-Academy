@@ -36,7 +36,7 @@ function Contact() {
           return;
         }
         try {
-          const response = await fetch("http://localhost:8080/api/appointment", {
+          const response = await fetch(`${API_URL}/api/appointment`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

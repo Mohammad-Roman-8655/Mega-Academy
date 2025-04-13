@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState,useEffect,useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from '../../config/apiConfig';
 function NoticeBoard() {
   const navigate=useNavigate();
   const [Notices, setNotices] = useState([]);
    
    const fetchNotices = async () => {
      try {
-       const response = await fetch("http://localhost:8080/api/Notice");
+       const response = await fetch(`${API_URL}/api/notice`);
        const data = await response.json();
        setNotices(data);
      } catch (error) {

@@ -12,7 +12,7 @@ function OurStudents() {
   const fetchStudents = async () => {
     try {
      
-      const response = await fetch("http://localhost:8080/api/Student");
+      const response = await fetch(`${API_URL}/api/student`);
       const data = await response.json();
       setStudents(data);
     } catch (error) {

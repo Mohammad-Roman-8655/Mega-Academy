@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 function Managers() {
     const [managers, setManagers] = useState([]);
 
 const fetchManagers = async () => {
   try {
-    const response = await fetch("http://localhost:8080/api/Manager");
+    const response = await fetch(`${API_URL}/api/manager`);
     const data = await response.json();
     setManagers(data);
   } catch (error) {

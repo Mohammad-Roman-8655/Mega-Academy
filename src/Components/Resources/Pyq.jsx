@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 
 function Pyq() {
   const [Pyqs, setPyqs] = useState([]);
@@ -9,7 +10,7 @@ function Pyq() {
     const fetchPyqs = async (standard = "") => {
       try {
         const url = standard
-          ? `http://localhost:8080/api/Pyq?standard=${standard}`
+          ? `${API_URL}/api/pyq?standard=${standard}`
           : "";
         const response = await fetch(url);
         const data = await response.json();

@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserProfile = async () => {
     try {
-      const res = await fetch("http://localhost:8080/api/auth/profile", {
+      const res = await fetch(`${API_URL}/api/auth/profile`, {
         headers: {
           Authorization: token,
         },

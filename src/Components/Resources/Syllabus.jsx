@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 
 function Syllabus() {
 
@@ -10,7 +11,7 @@ function Syllabus() {
     const fetchSyllabuses = async (standard = "") => {
       try {
         const url = standard
-          ? `http://localhost:8080/api/Syllabus?standard=${standard}`
+          ? `${API_URL}/api/syllabus?standard=${standard}`
           : "";
         const response = await fetch(url);
         const data = await response.json();

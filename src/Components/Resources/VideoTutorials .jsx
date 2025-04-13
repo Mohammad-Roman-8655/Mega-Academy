@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 
 function VideoTutorials () {
   const [VideoTutorials, setVideoTutorials] = useState([]);
@@ -11,7 +12,7 @@ function VideoTutorials () {
     const fetchVideoTutorials = async (standard = "", subjectName = "") => {
       try {
         const url = (standard && subjectName)
-          ? `http://localhost:8080/api/VideoTutorial?standard=${standard}&subjectName=${subjectName}`
+          ? `${API_URL}/api/video-tutorial?standard=${standard}&subjectName=${subjectName}`
           : "";
         const response = await fetch(url);
         const data = await response.json();

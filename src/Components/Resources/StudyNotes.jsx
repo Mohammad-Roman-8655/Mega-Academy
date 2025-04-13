@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { API_URL } from '../../config/apiConfig';
 
 function StudyNotes() {
   const [StudyNotes, setStudyNotes] = useState([]);
@@ -11,7 +12,7 @@ function StudyNotes() {
     const fetchStudyNotes = async (standard = "", subjectName = "") => {
       try {
         const url = (standard && subjectName)
-          ? `http://localhost:8080/api/StudyNotes?standard=${standard}&subjectName=${subjectName}`
+          ? `${API_URL}/api/study-notes?standard=${standard}&subjectName=${subjectName}`
           : "";
         const response = await fetch(url);
         const data = await response.json();

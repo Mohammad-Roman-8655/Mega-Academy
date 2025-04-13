@@ -11,7 +11,7 @@ function AcademicCalendar() {
     const fetchAcademicCalendars = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`${API_URL}/api/AcademicCalender`);
+            const response = await fetch(`${API_URL}/api/academic-calender`);
             const data = await response.json();
             setAcademicCalendars(data);
         } catch (error) {
