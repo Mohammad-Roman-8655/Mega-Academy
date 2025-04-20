@@ -42,7 +42,7 @@ function NavBarTop() {
     return (
         <>
             {/* Desktop top bar */}
-            <div className='hidden sm:block w-full bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-2 px-4 md:px-6 shadow-md'>
+            <div className='hidden sm:block w-full bg-gradient-to-r from-sky-500 to-gray-700 text-white py-2 px-4 md:px-6 shadow-md'>
                 <div className='max-w-7xl mx-auto flex flex-wrap justify-between items-center'>
                     {/* Contact info */}
                     <div className='flex items-center space-x-4 text-sm'>

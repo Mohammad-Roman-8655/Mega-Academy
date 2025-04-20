@@ -5,7 +5,7 @@ function EnrollStatus() {
      <div className='w-full h-auto'>
    <div>
         <h1 className="lg:text-[60px] md:text-[60px] sm:text-[50px] text-[40px] text-center font-bold my-10">Our Facilities</h1>
-        <div className='w-full ml-[40px]'>
+        <div className='w-full '>
             <div className=' lg:w-[90%] md:w-[90%] sm:w-[100%] w-[100%]  lg:flex md:flex sm:block block  justify-center items-center lg:mx-10 md:mx-10 sm:mx-0 mx-0 text-justify'>
                 <div className=' overflow-hidden  h-[270px] lg:w-1/4 md:w-1/4 sm:w-[80%] w-[80%] text-center lg:m-5 md:m-5 sm:m-0 m-0  lg:mb-0 md:mb-4 sm:mb-4 mb-4 border-2 p-7 rounded-md border-blue-400 hover:text-white  hover:bg-pink-400 hover:border-black'>
                    <i className="fa-solid fa-school  text-5xl animate-bounce"></i>
@@ -28,7 +28,7 @@ function EnrollStatus() {
                     <p className='text-justify font-semibold'>Well-resourced, aesthetically designed Primary School Library that creates an inviting ambience for the young readers.</p>
                 </div>
             </div>
-            <div  className=' lg:w-[90%] md:w-[90%] sm:w-[100%] w-[100%] lg:flex md:flex sm:block block justify-center items-center lg:mx-10 md:mx-10 sm:mx-0 mx-0 text-justify'>
+            <div  className=' lg:w-[90%] md:w-[90%] sm:w-[90%] w-[90%] lg:flex md:flex sm:block block justify-center items-center lg:mx-10 md:mx-10 sm:mx-0 mx-0 text-justify'>
                 <div className=' overflow-hidden h-[270px] lg:w-1/4 md:w-1/4 sm:w-[80%] w-[80%] text-center lg:m-5 md:m-5 sm:m-0 m-0 lg:mb-0 md:mb-4 sm:mb-4 mb-4 border-2 p-7 rounded-md border-blue-400 hover:text-white hover:bg-blue-500 hover:border-black'>
                     <i className="fa-solid fa-palette text-5xl animate-bounce"></i>
                     <p className='text-2xl font-bold my-3'>Art Room</p>
