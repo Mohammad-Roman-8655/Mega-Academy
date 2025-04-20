@@ -20,7 +20,7 @@ const ImageCarousel = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full mb-20 max-w-7xl mx-auto my-5">
+    <div className="relative w-full mb-10 max-w-7xl mx-auto my-5 ">
       {/* Image */}
       <div className="overflow-hidden rounded-lg shadow-lg aspect-video">
         <img

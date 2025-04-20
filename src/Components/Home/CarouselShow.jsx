@@ -51,7 +51,7 @@ function CarouselShow() {
       ];
     
   return (
-    <div className="min-h-screen bg-gray-100 overflow-hidden  
+    <div className="h-auto bg-gray-100  overflow-hidden  
      flex items-center justify-center">
     <ImageCarousel slides={slides} />
   </div>
